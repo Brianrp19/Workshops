@@ -110,11 +110,10 @@ body {
   flex-wrap: wrap;
 }
 
-/* Ahora sí, estilo para imágenes con clase image-box */
 .image-box {
   width: 200px;
   height: 150px;
-  object-fit: cover;  /* Para que la imagen no se distorsione */
+  object-fit: cover;  
   border: 2px dashed white;
   border-radius: 8px;
 }
