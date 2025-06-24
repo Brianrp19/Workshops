@@ -1,0 +1,103 @@
+/* Variables CSS para reutilizar colores */
+:root {
+  --verde-principal: #2e7d32;
+  --verde-claro: #43a047;
+  --gris-texto: #444;
+  --fondo-claro: #f5f5f5;
+}
+
+/* Aplicar estilos base a todo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Pseudo-elemento ::first-line para destacar la primera línea del texto */
+.hero-text p::first-line {
+  font-weight: bold;
+  color: var(--verde-principal);
+}
+
+/* Selector por ID */
+#firstname {
+  border: 2px solid red;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Selector de clase */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: var(--verde-claro);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+/* Pseudo-clase :hover para interacción */
+.btn:hover {
+  background: var(--verde-principal);
+  cursor: pointer;
+}
+
+/* Selector de atributo: aplicar borde rojo a inputs que tienen atributo required */
+input[required] {
+  border: 1px solid red;
+}
+
+/* Combinación de selectores: input con clase required */
+input.required {
+  border: 1px solid orange;
+}
+
+/* Selector descendiente: todos los links dentro de la lista con clase main */
+ul.main li a {
+  color: var(--gris-texto);
+  text-decoration: none;
+}
+
+/* Selector de hijos directos */
+ul.main > li > a {
+  font-weight: bold;
+}
+
+/* Pseudo-clase estructural: primer hijo */
+.stats div:first-child h2 {
+  color: yellow;
+}
+
+/* Pseudo-clase estructural: último hijo */
+.stats div:last-child p {
+  font-style: italic;
+}
+
+/* Pseudo-clase para input con foco */
+input:focus {
+  outline: 2px solid var(--verde-principal);
+}
+
+/* Pseudo-clase para checkbox marcado */
+input[type="checkbox"]:checked + label {
+  color: green;
+  font-weight: bold;
+}
+
+/* Selector múltiple, uniendo selectores separados por coma */
+h1, h2, p {
+  color: var(--verde-principal);
+}
+
+/* Pseudoelemento ::before para decorar */
+.hero-text h1::before {
+  content: "🌿 ";
+}
+
+/* Pseudoelemento ::after para agregar contenido después */
+.hero-text h1::after {
+  content: " 🌎";
+}
