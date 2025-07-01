@@ -1,0 +1,149 @@
+/* Estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Imagen de perfil */
+.perfil {
+  flex: 0 0 100px;
+}
+
+.perfil img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Contenido general */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Secciones */
+section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+.sobre-mi p,
+.educacion ul,
+.habilidades ul,
+.proyecto p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.educacion ul,
+.lista-habilidades {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Proyectos en forma vertical */
+.proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.proyecto {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.proyecto h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #006699;
+}
+
+.proyecto p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Responsividad */
+
+/* Teléfonos */
+@media (max-width: 599px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil {
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .contenedor {
+    flex-direction: column;
+  }
+
+  .perfil {
+    margin-bottom: 20px;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+  .contenedor {
+    flex-direction: row;
+  }
+
+  .perfil {
+    align-self: flex-start;
+  }
+}
